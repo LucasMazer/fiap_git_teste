@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-light: #ffffff;
+    --color-orange: #e6630d;
+    --color-blue: rgb(12, 7, 39);
+    --border-radius: 5px;
+    --transition: .5s;
+    --gradiente-start: rgba(4, 9, 30, .3);
+    --gradiente-end: rgba(4, 9, 30, .9);
+}
+
+/************** formatações genéricas ************/
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-light);
+    font-weight: 700;
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: var(--color-orange);
+}
+
+img {
+    width: 100%;
+}
+
+/************** fim formatações genéricas *********/
+
+
+/************** Header *********/
+.header-page {
+    width: 100%;
+    height: 100px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header-menu ul {
+    display: flex;
+}
+
+.header-menu li {
+    margin-left: 20px;
+}
+
+.header-title {
+    color: var(--color-light);
+    font: 32px;
+}
+
+.header-span {
+    background-color: var(--color-orange);
+    padding: 5px;
+    border-radius: var(--border-radius);
+}
+
+.active-scroll {
+    background-color: rgba(1, 1, 70, .90);
+}
+
+
+/************** Fim Header *********/
+
+/************** Hero *********/
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(var(--gradiente-start), var(--gradiente-end)),
+        url(../image/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-light);
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 9vmin;
+    margin: 30px 0;
+}
+
+.hero p {
+    width: 70%;
+    margin: 20px 0 30px;
+}
+
+.btn {
+    background-color: var(--color-orange);
+    border: 2px solid var(--color-orange);
+    padding: 8px 35px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: transparent;
+}
+
+
+/************** Fim Hero *********/
+
+/* Paraiso */
+.paradise {
+    width: 90%;
+    margin: auto;
+    min-height: 100vh;
+    padding: 20px;
+    /* border: 1px solid #000; */
+}
+
+.paradise h2 {
+    text-align: center;
+    font-size: 6vmin;
+}
+
+.paradise-itens {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.paradise-itens div {
+    width: 30%;
+    height: 500px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.paradise-img1 {
+    background-image: linear-gradient(var(--gradiente-start), var(--gradiente-end)),
+        url(../image/explore1.jpg);
+}
+
+.paradise-img2 {
+    background-image: linear-gradient(var(--gradiente-start), var(--gradiente-end)),
+        url(../image/explore2.jpg);
+}
+
+.paradise-img3 {
+    background-image: linear-gradient(var(--gradiente-start), var(--gradiente-end)),
+        url(../image/explore3.jpg);
+}
+
+/* Fim Paraiso */
+
+/* discover  */
+
+.discover {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(var(--gradiente-start), var(--gradiente-end)),
+    url(../image/emcasa.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.discover-content {
+    width: 60%;
+    padding: 50px;
+    color: var(--color-light);
+}
+
+.discover-content h2 {
+    font-size: 7vmin;
+}
+
+.discover-content p {
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 32px;
+
+}
+/* Fim discover  */
+
+
+
+/* gallery */
+.gallery {
+    width: 90%;
+    min-height: 100vh;
+    margin: 50px auto;
+    /* border: 1px solid #000; */
+}
+
+.gallery-title {
+    margin: 30px;
+    text-align: center;
+    font-size: 6vmin;
+}
+
+.gallery-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.gallery-item {
+    width: 28%;
+    margin: 30px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 1px 1px 30px #ccc;
+    border-radius: var(--border-radius);  
+    transition: var(--transition);  
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+
+.gallery-item img {
+    width: 90%;
+    border-radius: var(--border-radius);
+}
+
+.gallery-item h3 {
+  margin: 20px 0;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.gallery-item p {
+    margin-bottom: 30px;
+    width: 80%;
+ 
+}
+
+
+
+
+
+/* fim gallery */
+
+
+
+/* Pensando no responsivo  */
+@media(max-width: 1020px) {
+
+    .paradise h2 {
+        font-size: 5vmin;
+    }
+
+    .paradise-itens {
+        flex-direction: column;
+        /* width: 80%; */
+    }
+
+    .paradise-itens div {
+        /* flex-direction: column; */
+        width: 80%;
+    }
+
+}
